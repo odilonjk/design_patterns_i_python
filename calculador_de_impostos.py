@@ -1,11 +1,12 @@
-from impostos import calcula_ISS, calcula_ICMS, calcula_frete
+from impostos import ISS, ICMS, Frete
 
 
 class Calculador_de_impostos(object):
 
     def realiza_calculo(self, orcamento, imposto):
 
-        imposto_calculado = imposto(orcamento)
+        # imposto agora recebe a classe e chama o metodo
+        imposto_calculado = imposto.calcula(orcamento)
 
         print(imposto_calculado)
 
@@ -21,6 +22,7 @@ if __name__ == '__main__':
 
     orcamento = Orcamento(500)
 
-    calculador.realiza_calculo(orcamento, calcula_ISS)
-    calculador.realiza_calculo(orcamento, calcula_ICMS)
-    calculador.realiza_calculo(orcamento, calcula_frete)
+    # estou passando a classe como parametro
+    calculador.realiza_calculo(orcamento, ISS())
+    calculador.realiza_calculo(orcamento, ICMS())
+    calculador.realiza_calculo(orcamento, Frete())
