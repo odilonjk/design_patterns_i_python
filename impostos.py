@@ -1,16 +1,16 @@
 class ISS(object):
 
     def calcula(self, orcamento):
-        return orcamento.valor() * 0.1
+        return orcamento.valor * 0.1
 
 
 class ICMS(object):
 
     def calcula(self, orcamento):
-        return orcamento.valor() * 0.06
+        return orcamento.valor * 0.06
 
 
 class Frete(object):
 
     def calcula(self, orcamento):
-        return orcamento.valor() * 0.02
+        return orcamento.valor * 0.02

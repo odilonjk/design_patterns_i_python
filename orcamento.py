@@ -5,5 +5,6 @@ class Orcamento(object):
         self.__valor = valor
 
     # property para poder ler o valor
+    @property
     def valor(self):
         return self.__valor
