@@ -1,0 +1,332 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pe",
+				"permission_required\tfunction"
+			],
+			[
+				"cro",
+				"contrib\tmodule"
+			],
+			[
+				"lo",
+				"login_required\tfunction"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"fo",
+				"form\tTag"
+			],
+			[
+				"Regi",
+				"RegistrarUsuarioView\tclass"
+			],
+			[
+				"v",
+				"views"
+			],
+			[
+				"view",
+				"views\tmodule"
+			],
+			[
+				"vie",
+				"views\tmodule"
+			],
+			[
+				"Re",
+				"RegistrarUsuarioForm\tclass"
+			],
+			[
+				"m",
+				"models\tmodule"
+			],
+			[
+				"a",
+				"adiciona_erro\tfunction"
+			],
+			[
+				"user",
+				"user_exists\tstatement"
+			],
+			[
+				"con",
+				"contrib\tmodule"
+			],
+			[
+				"Err",
+				"ErrorList\tclass"
+			],
+			[
+				"i",
+				"is_valid"
+			],
+			[
+				"form",
+				"forms\tmodule"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "class Orcamento(object):\n\n    def __init__(self, valor):\n",
+			"file": "orcamento.py",
+			"file_size": 0,
+			"file_write_time": 131320160349592102,
+			"settings":
+			{
+				"buffer_size": 57,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Anaconda: Display object docs"
+			],
+			[
+				"Anaconda",
+				"Anaconda: Display object docs"
+			],
+			[
+				"Paca",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"package lis",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Install Package Control"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			" import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lonez/Workspace/Python/curso-design-patterns-i"
+	],
+	"file_history":
+	[
+		"/home/lonez/Workspace/Django/curso-django-alura/connectedin/settings.py",
+		"/home/lonez/Workspace/Django/curso-django-alura/perfis/views.py",
+		"/home/lonez/Workspace/Django/curso-django-alura/usuarios/urls.py",
+		"/home/lonez/Workspace/Django/curso-django-alura/usuarios/templates/login.html",
+		"/home/lonez/Workspace/Django/curso-django-alura/usuarios/templates/login",
+		"/home/lonez/Workspace/Django/curso-django-alura/usuarios/templates/registrar.html",
+		"/home/lonez/Workspace/Django/curso-django-alura/perfis/templates/perfil.html",
+		"/home/lonez/Workspace/Django/curso-django-alura/perfis/templates/base.html",
+		"/home/lonez/Workspace/Django/curso-django-alura/perfis/templates/index.html",
+		"/home/lonez/Workspace/Django/curso-django-alura/usuarios/views.py",
+		"/home/lonez/Workspace/Django/curso-django-alura/perfis/models.py",
+		"/home/lonez/Workspace/Django/curso-django-alura/usuarios/models.py",
+		"/home/lonez/Workspace/Django/curso-django-alura/usuarios/forms.py",
+		"/home/lonez/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\t<"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "orcamento.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 57,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "design-patterns-i.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
