@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"ca",
+				"calcula"
+			],
+			[
+				"or",
+				"orcamento"
+			],
+			[
+				"calc",
+				"calcula_frete\tfunction"
+			],
+			[
+				"calcula",
+				"calcula_ICMS\tfunction"
+			],
+			[
+				"cal",
+				"calcula_ICMS\tfunction"
+			],
+			[
+				"calcu",
+				"calcula_ISS\tfunction"
+			],
+			[
+				"def",
+				"def\tFunction"
+			],
+			[
+				"impos",
+				"imposto_calculado\tstatement"
+			],
+			[
+				"impo",
+				"imposto_calculado\tstatement"
+			],
+			[
+				"re",
+				"realiza_calculo\tfunction"
+			],
+			[
 				"pe",
 				"permission_required\tfunction"
 			],
@@ -76,13 +116,28 @@
 	"buffers":
 	[
 		{
-			"contents": "class Orcamento(object):\n\n    def __init__(self, valor):\n",
 			"file": "orcamento.py",
-			"file_size": 0,
-			"file_write_time": 131320160349592102,
 			"settings":
 			{
-				"buffer_size": 57,
+				"buffer_size": 217,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "calculador_de_impostos.py",
+			"settings":
+			{
+				"buffer_size": 765,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "impostos.py",
+			"settings":
+			{
+				"buffer_size": 282,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -153,6 +208,7 @@
 	],
 	"file_history":
 	[
+		"/home/lonez/Workspace/Python/curso-design-patterns-i/.gitignore",
 		"/home/lonez/Workspace/Django/curso-django-alura/connectedin/settings.py",
 		"/home/lonez/Workspace/Django/curso-django-alura/perfis/views.py",
 		"/home/lonez/Workspace/Django/curso-django-alura/usuarios/urls.py",
@@ -202,7 +258,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -211,15 +267,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 57,
+						"buffer_size": 217,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								30,
-								30
+								167,
+								167
 							]
 						],
 						"settings":
@@ -235,7 +291,88 @@
 									"selector": "source.python - string - constant.numeric"
 								}
 							],
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "calculador_de_impostos.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 765,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "impostos.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

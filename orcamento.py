@@ -1,10 +1,39 @@
+# -*- coding: UTF-8 -*-
 class Orcamento(object):
 
-    def __init__(self, valor):
-        # escondendo o valor
+    def __init__(self):
+        self.__itens = []
+
+    # quando a propriedade for acessada, ela soma o valor de todos itens.
+    @property
+    def valor(self):
+        total = 0.0
+        for item in self.__itens:
+            total += item.valor
+        return total
+
+    def obter_itens(self):
+        return tuple(self.__itens)
+
+    @property
+    def total_itens(self):
+        return len(self.__itens)
+
+    def adiciona_item(self, item):
+        self.__itens.append(item)
+
+
+# um item criado não pode ser alterado, suas propriedade são apenas de leitura
+class Item(object):
+
+    def __init__(self, nome, valor):
+        self.__nome = nome
         self.__valor = valor
 
-    # property para poder ler o valor
+    @property
+    def nome(self):
+        return self.__nome
+
     @property
     def valor(self):
         return self.__valor
