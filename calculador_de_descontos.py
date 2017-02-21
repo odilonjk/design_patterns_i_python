@@ -1,12 +1,15 @@
 # -*- coding: UTF-8 -*-
+from descontos import Desconto_por_valor, Desconto_por_cinco_itens
+
+
 class Calculador_de_descontos(object):
     """Retorna valor de desconto baseado no orçamento"""
 
     def calcula(self, orcamento):
-        if orcamento.total_itens > 5:
-            return orcamento.valor * 0.1
-        elif orcamento.valor > 500:
-            return orcamento.valor * 0.08
+        desconto = Desconto_por_cinco_itens().calcula(orcamento)
+        if(desconto == 0):
+            desconto = Desconto_por_valor().calcula(orcamento)
+        return desconto
 
 
 if __name__ == '__main__':
