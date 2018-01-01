@@ -119,7 +119,11 @@ class Orcamento(object):
         self.__desconto_extra += desconto
 
     def aplica_desconto_extra(self):
-        self.estado_atual.aplica_desconto_extra(self)
+        if self.__desconto_extra > 0:
+            raise Exception('Este orçamento já recebeu desconto extra.')
+        else:
+            self.estado_atual.aplica_desconto_extra(self)
+            self.__recebeu_desconto_extra = True
 
     def aprova(self):
         self.estado_atual.aprova(self)
@@ -129,8 +133,6 @@ class Orcamento(object):
 
     def finaliza(self):
         self.estado_atual.finaliza(self)
-
-
 
 # um item criado não pode ser alterado, suas propriedade são apenas de leitura
 class Item(object):
@@ -165,7 +167,8 @@ if __name__ == '__main__':
     print(orcamento.estado_atual)
     print('Valor do orçamento %s' % orcamento.valor)
     orcamento.aprova()
-    orcamento.aplica_desconto_extra()
+    
+    # orcamento.aplica_desconto_extra()
     print(orcamento.estado_atual)
     print('Valor do orçamento %s' % orcamento.valor)
     orcamento.finaliza()
