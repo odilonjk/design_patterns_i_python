@@ -1,16 +1,34 @@
 from abc import ABCMeta, abstractmethod
 
+class Imposto(object):
+
+    __metaclass__ = ABCMeta
+
+    def __init__(self, outro_imposto=None):
+        self.__outro_imposto = outro_imposto
+
+    def calcula_outro_imposto(self, orcamento):
+        if self.__outro_imposto is None:
+            return 0
+        else:
+            return self.__outro_imposto.calcula(orcamento)
+
+    @abstractmethod
+    def calcula(self, orcamento):
+        pass
+
+
 # Classe abstrata para calculo genérico de máxima
 # ou mínima taxação do imposto.
-class TemplateImpostoCondicional(object):
+class TemplateImpostoCondicional(Imposto):
 
     __metaclass__ = ABCMeta
 
     def calcula(self, orcamento):
         if self.deve_usar_maxima_taxacao(orcamento):
-            return self.maxima_taxacao(orcamento)
+            return self.maxima_taxacao(orcamento) + self.calcula_outro_imposto(orcamento)
         else:
-            return self.minima_taxacao(orcamento)
+            return self.minima_taxacao(orcamento) + self.calcula_outro_imposto(orcamento)
 
     # Esta anotação exige que o método seja implementado
     # na classe filha.
@@ -27,22 +45,22 @@ class TemplateImpostoCondicional(object):
         pass
 
 
-class ISS(object):
+class ISS(Imposto):
 
     def calcula(self, orcamento):
-        return orcamento.valor * 0.1
+        return orcamento.valor * 0.1 + self.calcula_outro_imposto(orcamento)
 
 
-class ICMS(object):
-
-    def calcula(self, orcamento):
-        return orcamento.valor * 0.06
-
-
-class Frete(object):
+class ICMS(Imposto):
 
     def calcula(self, orcamento):
-        return orcamento.valor * 0.02
+        return orcamento.valor * 0.06 + self.calcula_outro_imposto(orcamento)
+
+
+class Frete(Imposto):
+
+    def calcula(self, orcamento):
+        return orcamento.valor * 0.02 + self.calcula_outro_imposto(orcamento)
 
 # Utilizando classe abstrata.
 class ICPP(TemplateImpostoCondicional):
@@ -74,5 +92,3 @@ class IKCV(TemplateImpostoCondicional):
 
     def minima_taxacao(self, orcamento):
         return orcamento.valor * 0.06
-
-    
