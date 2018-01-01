@@ -32,7 +32,7 @@ if __name__ == '__main__':
     frete = calculador.realiza_calculo(orcamento, Frete())
     icpp = calculador.realiza_calculo(orcamento, ICPP())
     ikcv = calculador.realiza_calculo(orcamento, IKCV())
-    composto = calculador.realiza_calculo(orcamento, IKCV(ICPP))
+    composto = calculador.realiza_calculo(orcamento, IKCV(ICPP()))
     print('Valor ISS: R$%s' % iss)
     print('Valor ICMS: R$%s' % icms)
     print('Valor Frete: R$%s' % frete)
