@@ -1,4 +1,4 @@
-from impostos import ISS, ICMS, Frete
+from impostos import ISS, ICMS, Frete, ICPP, IKCV
 
 
 class Calculador_de_impostos(object):
@@ -30,6 +30,10 @@ if __name__ == '__main__':
     iss = calculador.realiza_calculo(orcamento, ISS())
     icms = calculador.realiza_calculo(orcamento, ICMS())
     frete = calculador.realiza_calculo(orcamento, Frete())
-    print('Valor ISS: R$%s' % calculador.realiza_calculo(orcamento, ISS()))
-    print('Valor ISS: R$%s' % calculador.realiza_calculo(orcamento, ICMS()))
-    print('Valor ISS: R$%s' % calculador.realiza_calculo(orcamento, Frete()))
+    icpp = calculador.realiza_calculo(orcamento, ICPP())
+    ikcv = calculador.realiza_calculo(orcamento, IKCV())
+    print('Valor ISS: R$%s' % iss)
+    print('Valor ICMS: R$%s' % icms)
+    print('Valor Frete: R$%s' % frete)
+    print('Valor ICPP: R$%s' % icpp)
+    print('Valor IKCV: R$%s' % ikcv)
