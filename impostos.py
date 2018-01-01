@@ -45,8 +45,15 @@ class TemplateImpostoCondicional(Imposto):
         pass
 
 
+def IPVX(metodo):
+    def wrapper(self, orcamento):
+        return metodo(self, orcamento) + 50.0
+    return wrapper
+
+
 class ISS(Imposto):
 
+    @IPVX
     def calcula(self, orcamento):
         return orcamento.valor * 0.1 + self.calcula_outro_imposto(orcamento)
 
