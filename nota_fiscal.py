@@ -2,12 +2,16 @@ from datetime import datetime
 from item import Item
 
 class NotaFiscal(object):
-    def __init__(self, razao_social, cnpj, itens, data_emissao=datetime.now(), detalhes=''):
+    def __init__(self, razao_social, cnpj, itens, data_emissao=datetime.now(), detalhes='', observers=[]):
         self.__razao_sozial = razao_social
         self.__cnpj = cnpj
         self.__itens = itens
         self.__data_emissao = data_emissao
         self.__detalhes = detalhes
+        
+        for o in observers:
+            o(self)
+        
     
     @property
     def razao_social(self):
@@ -51,7 +55,7 @@ class NotaFiscal(object):
 
     def __str__(self):
         return 'Razão Social: {:s}\nData de emissão: {:%d-%m-%Y %H:%M:%S}\n'.format(self.razao_social, self.data_emissao)
-
+    
 if __name__ == '__main__':
     
     from builder_nota_fiscal import BuilderNotaFiscal
@@ -63,7 +67,7 @@ if __name__ == '__main__':
           .com_razao_social('USAF')
           .com_itens({item}).build())
 
-    print(nf)
-    print('Itens--------\n')
-    for i in nf.itens:
-        print(i)
+    # print(nf)
+    # print('Itens--------\n')
+    # for i in nf.itens:
+    #     print(i)

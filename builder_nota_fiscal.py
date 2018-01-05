@@ -1,5 +1,6 @@
 from nota_fiscal import NotaFiscal
 from datetime import datetime
+from observers import *
 
 class BuilderNotaFiscal(object):
 
@@ -41,6 +42,7 @@ class BuilderNotaFiscal(object):
             self.__detalhes = ''
         if self.__data_emissao is None:
             self.__data_emissao = datetime.now()
+        observers = [imprime, envia_por_email, salva_no_banco]
         nf = NotaFiscal(razao_social=self.__razao_social, cnpj=self.__cnpj,
-        itens=self.__itens, data_emissao=self.__data_emissao, detalhes=self.__detalhes)
+        itens=self.__itens, data_emissao=self.__data_emissao, detalhes=self.__detalhes, observers=observers)
         return nf
